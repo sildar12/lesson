@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="liferay_server">http://10.0.2.2:8080</string>
+    <string name="liferay_company_id">20101</string>
+    <string name="liferay_group_id">20124</string>
+    <integer name="liferay_portal_version">72</integer>
+
+    <!-- LoginScreenlet values -->
+    <!-- <string name="liferay_login">safiullinib@gmail.com</string>-->
+    <!-- <string name="liferay_password">1</string>-->
+
+
+  <!-- SignupScreenlet values -->
+    <string name="liferay_anonymousApiUserName">userforsignupanonymous@liferay.com</string>
+    <string name="liferay_anonymousApiPassword">1</string>
+
+    <!-- DDLFormScreenlet values -->
+    <string name="liferay_recordset_id">67530</string>
+    <string name="liferay_structure_id">29817</string>
+    <string name="liferay_recordset_fields">title</string>
+    <string name="liferay_folder_id">54469</string>
+</resources>
