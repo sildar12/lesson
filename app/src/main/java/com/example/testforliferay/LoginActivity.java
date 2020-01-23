@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
+
 import com.liferay.mobile.screens.auth.login.LoginListener;
 import com.liferay.mobile.screens.auth.login.LoginScreenlet;
 import com.liferay.mobile.screens.context.AuthenticationType;
@@ -18,13 +20,14 @@ public class LoginActivity extends ThemeActivity implements LoginListener, View.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        //setContentView(R.layout.login);
+        setContentView(R.layout.logintwo);
 
         loginScreenlet = (LoginScreenlet) findViewById(R.id.login_screenlet);
-        loginScreenletRedirect = (LoginScreenlet) findViewById(R.id.login_screenlet_redirect);
+        //loginScreenletRedirect = (LoginScreenlet) findViewById(R.id.login_screenlet_redirect);
 
         loginScreenlet.setListener(this);
-        loginScreenletRedirect.setListener(this);
+        //loginScreenletRedirect.setListener(this);
 
        // setDefaultValues();
     }
@@ -38,12 +41,14 @@ public class LoginActivity extends ThemeActivity implements LoginListener, View.
 
     @Override
     public void onLoginSuccess(User user) {
-        info(getString(R.string.login_success_info));
+        startActivity(new Intent(LoginActivity.this, ActivityOne.class));
+        info("Yes="+getString(R.string.login_success_info));
     }
 
     @Override
     public void onLoginFailure(Exception e) {
         error(getString(R.string.login_screenlet_error), e);
+        Toast.makeText(LoginActivity.this,"Login failed", Toast.LENGTH_LONG).show();
     }
 
     @Override

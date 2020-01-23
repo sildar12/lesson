@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:liferay="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-     >
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    >
+
 
     <com.liferay.mobile.screens.auth.login.LoginScreenlet
         android:id="@+id/login_screenlet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
         liferay:basicAuthMethod="email"
-        liferay:credentialsStorage="auto"
-        liferay:layoutId="@layout/login_material"
-        tools:ignore="MissingConstraints" />
+        liferay:layoutId="@layout/login_westeros"
+        />
 
-</android.support.constraint.ConstraintLayout>
+
+
+
+</FrameLayout>
